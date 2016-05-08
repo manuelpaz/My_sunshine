@@ -22,9 +22,9 @@ import java.util.List;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment {
+public class ForecastFragment extends Fragment {
     ArrayAdapter<String> mForecastAdapter;
-    public MainActivityFragment() {
+    public ForecastFragment() {
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MainActivityFragment extends Fragment {
             }
             forecastJsonStr = buffer.toString();
         } catch (IOException e) {
-            Log.e("MainActivityFragment", "Error ", e);
+            Log.e("ForecastFragment", "Error ", e);
             // If the code didn't successfully get the weather data, there's no point in attemping
             // to parse it.
             return null;
@@ -114,7 +114,7 @@ public class MainActivityFragment extends Fragment {
                 try {
                     reader.close();
                 } catch (final IOException e) {
-                    Log.e("MainActivityFragment", "Error closing stream", e);
+                    Log.e("ForecastFragment", "Error closing stream", e);
                 }
             }
         }
